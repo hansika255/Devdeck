@@ -9,7 +9,7 @@ import { GitHubRepo } from '@models/github.model';
   template: `
     <article
       class="flex h-full flex-col gap-2.5 rounded-lg border border-slate-200 p-4 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md sm:p-5"
-      style="background-color: #FFFAE6"
+      style="background-color: #FFFFFF"
     >
       <div class="flex items-start justify-between gap-2">
         <a

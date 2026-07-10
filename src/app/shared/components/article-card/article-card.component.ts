@@ -15,7 +15,7 @@ import { Article } from '@models/article.model';
   template: `
     <article
       class="group flex h-full flex-col overflow-hidden rounded-lg border border-slate-200 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md"
-      style="background-color: #FFFAE6"
+      style="background-color: #FFFFFF"
     >
       @if (article().cover_image) {
         <div class="h-40 overflow-hidden">

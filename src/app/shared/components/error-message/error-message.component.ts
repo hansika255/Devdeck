@@ -22,7 +22,7 @@ import { ChangeDetectionStrategy, Component, input, output } from '@angular/core
         <button
           type="button"
           class="rounded-md bg-rose-600 px-4 py-1.5 text-sm font-medium transition-colors duration-150 hover:bg-rose-700 active:scale-95"
-          style="color: #FFFAE6"
+          style="color: #FFFFFF"
           (click)="retry.emit()"
         >
           Try again

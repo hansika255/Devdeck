@@ -51,7 +51,7 @@ interface SearchResult {
       } @else if (error()) {
         <app-error-message [message]="error()!.message" [showRetry]="true" (retry)="onRetry()" />
       } @else if (profile()) {
-        <div class="mb-6 flex animate-[fade-in-up_200ms_ease-out] flex-col items-center gap-4 rounded-lg border border-slate-200 p-5 text-center shadow-sm sm:flex-row sm:text-left" style="background-color: #FFFAE6">
+        <div class="mb-6 flex animate-[fade-in-up_200ms_ease-out] flex-col items-center gap-4 rounded-lg border border-slate-200 p-5 text-center shadow-sm sm:flex-row sm:text-left" style="background-color: #FFFFFF">
           <img
             [src]="profile()!.avatar_url"
             [alt]="profile()!.login"
