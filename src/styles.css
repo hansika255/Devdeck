@@ -14,9 +14,10 @@
   --color-brand-600: #4338ca;
   --color-brand-700: #3730a3;
 
-  --color-surface: #FFFAE6;
-  --color-surface-muted: #f1f5f9;
-  --color-border: #e2e8f0;
+  --color-surface: #F5FAFF;
+  --color-surface-muted: #ECF5FF;
+  --color-card: #FFFFFF;
+  --color-border: #D8E7F5;
 
   --color-success-500: #10b981;
   --color-danger-500: #e11d48;

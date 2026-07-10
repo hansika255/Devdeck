@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, input, output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, input, output, signal } from '@angular/core';
 
 /**
  * Generic single-select chip filter. Knows nothing about articles —
@@ -19,7 +19,7 @@ import { ChangeDetectionStrategy, Component, input, output } from '@angular/core
       >
         All
       </button>
-      @for (tag of tags(); track tag) {
+      @for (tag of visibleTags(); track tag) {
         <button
           type="button"
           class="rounded-full px-3.5 py-1.5 text-xs font-medium transition-colors duration-150 active:scale-95"
@@ -30,6 +30,15 @@ import { ChangeDetectionStrategy, Component, input, output } from '@angular/core
           #{{ tag }}
         </button>
       }
+      @if (hasMoreTags()) {
+        <button
+          type="button"
+          class="rounded-full px-3.5 py-1.5 text-xs font-medium transition-colors duration-150 active:scale-95 bg-slate-100 text-slate-600 hover:bg-slate-200"
+          (click)="toggleTagVisibility()"
+        >
+          {{ showAllTags() ? 'Show Less' : 'Show More' }}
+        </button>
+      }
     </div>
   `,
 })
@@ -37,4 +46,17 @@ export class TagFilterComponent {
   readonly tags = input<string[]>([]);
   readonly selectedTag = input<string | null>(null);
   readonly tagSelected = output<string | null>();
+
+  protected readonly showAllTags = signal(false);
+
+  protected readonly visibleTags = computed(() => {
+    const allTags = this.tags();
+    return this.showAllTags() ? allTags : allTags.slice(0, 12);
+  });
+
+  protected readonly hasMoreTags = computed(() => this.tags().length > 12);
+
+  protected toggleTagVisibility(): void {
+    this.showAllTags.set(!this.showAllTags());
+  }
 }
