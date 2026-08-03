@@ -37,6 +37,37 @@ body {
   @apply bg-[var(--color-surface)] font-sans text-slate-800 antialiased;
 }
 
+/* Dark theme overrides cover the shared utility styles used by every page. */
+html.dark {
+  --color-surface: #0f172a;
+  --color-surface-muted: #172033;
+  --color-card: #172033;
+  --color-border: #334155;
+}
+
+.dark body { color: #e2e8f0; }
+.dark .text-slate-800 { color: #f1f5f9; }
+.dark .text-slate-700 { color: #e2e8f0; }
+.dark .text-slate-600 { color: #cbd5e1; }
+.dark .text-slate-500 { color: #94a3b8; }
+.dark .text-slate-400 { color: #94a3b8; }
+.dark .text-slate-300 { color: #64748b; }
+.dark .border-slate-300 { border-color: #475569; }
+.dark .border-slate-200 { border-color: #334155; }
+.dark .border-slate-100 { border-color: #273449; }
+.dark .bg-slate-50,
+.dark .bg-slate-100 { background-color: #1e293b; }
+.dark [class~="hover:bg-slate-50"]:hover,
+.dark [class~="hover:bg-slate-100"]:hover { background-color: #334155; }
+.dark [class~="hover:bg-slate-200"]:hover { background-color: #475569; }
+.dark .bg-brand-50 { background-color: #312e81; }
+.dark .text-brand-600 { color: #a5b4fc; }
+.dark [style*="background-color: #FFFFFF"] { background-color: #172033 !important; }
+.dark nav { background-color: rgba(15, 23, 42, 0.95) !important; }
+.dark app-loading-spinner { background-color: rgba(15, 23, 42, 0.9) !important; }
+.dark input { background-color: #172033; color: #f1f5f9; }
+.dark input::placeholder { color: #94a3b8; }
+
 /* Consistent, visible keyboard focus across every interactive element in the app. */
 :focus-visible {
   outline: 2px solid var(--color-brand-500);
