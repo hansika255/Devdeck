@@ -8,7 +8,7 @@ export class SanityService {
 
   client = createClient({
     projectId: 'rtgu3xc1',
-    dataset: 'production',
+    dataset: 'dev',
     apiVersion: '2024-01-01',
     useCdn: true,
   });
