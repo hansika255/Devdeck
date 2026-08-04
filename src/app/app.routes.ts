@@ -23,4 +23,8 @@ export const routes: Routes = [
     path: 'bookmarks',
     loadComponent: () => import('./features/bookmarks/pages/bookmarks/bookmarks.component').then((m) => m.BookmarksComponent),
   },
+  {
+    path: 'blogs',
+    loadComponent: () => import('./features/blogs/pages/blogs/blogs.component').then((m) => m.BlogsComponent),
+  },
 ];

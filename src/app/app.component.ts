@@ -27,6 +27,7 @@ export class AppComponent {
     { label: 'Home', path: '/home' },
     { label: 'GitHub Search', path: '/github-search' },
     { label: 'Bookmarks', path: '/bookmarks' },
+    { label: 'Blogs', path: '/blogs' },
     {label: 'About', path: '/about'  },
     {label: 'support', path: '/support'  }
   ];
